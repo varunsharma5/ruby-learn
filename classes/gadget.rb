@@ -1,25 +1,13 @@
 class Gadget
+    # Accessor methods : generates the setter and getter methods
+    attr_accessor :username
+    attr_reader :production_number #, :username
+    attr_writer :password #, :username
+
     def initialize
         @username = "User #{rand(1..100)}"
         @password = "secret"
         @production_number = "#{("a".."z").to_a.sample}-#{rand(1...999)}"
-    end
-    
-    # Getter Methods
-    def username
-        @username
-    end
-
-    def username=(username)
-        @username = username
-    end
-
-    def protected_number
-        @production_number
-    end
-
-    def password=(password)
-        @password = password
     end
 
     def to_s
