@@ -1,21 +1,14 @@
 class Gadget
-
+    def initialize
+        @username = "User #{rand(1..100)}"
+        @password = "secret"
+        @production_number = "#{("a".."z").to_a.sample}-#{rand(1...999)}"
+    end
 end
 
 phone = Gadget.new
+p phone
+p phone.instance_variables
 laptop = Gadget.new
-microwave = Gadget.new
-
-puts phone
-puts laptop
-puts microwave
-
-puts phone.is_a?(Gadget)
-puts phone.is_a?(Object)
-puts phone.is_a?(BasicObject)
-
-puts
-
-puts phone.respond_to?(:class)
-puts phone.respond_to?(:is_a?)
-puts phone.respond_to?(:length)
+p laptop
+p laptop.instance_variables
