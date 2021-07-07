@@ -10,8 +10,16 @@ class Gadget
         @username
     end
 
+    def username=(username)
+        @username = username
+    end
+
     def protected_number
         @production_number
+    end
+
+    def password=(password)
+        @password = password
     end
 
     def to_s
@@ -22,8 +30,8 @@ end
 phone = Gadget.new
 laptop = Gadget.new
 
-
-# puts phone.to_s
-# puts laptop.to_s
 puts phone.username
-puts phone.protected_number
+phone.username=('Varun Sharma')
+puts phone.username
+
+phone.password = 'Best Password ever!'
