@@ -4,11 +4,13 @@ class Gadget
         @password = "secret"
         @production_number = "#{("a".."z").to_a.sample}-#{rand(1...999)}"
     end
+
+    def to_s
+        puts "User: #{@username}, Production Number: #{@production_number}"
+    end
 end
 
 phone = Gadget.new
 p phone
-p phone.instance_variables
-laptop = Gadget.new
-p laptop
-p laptop.instance_variables
+
+puts phone.to_s
