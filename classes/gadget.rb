@@ -6,11 +6,13 @@ class Gadget
     end
 
     def to_s
-        puts "User: #{@username}, Production Number: #{@production_number}"
+        puts "User: #{@username}; Production Number: #{@production_number}. Its is made from the #{self.class} and it has ID #{self.object_id}"
     end
 end
 
 phone = Gadget.new
-p phone
+laptop = Gadget.new
+
 
 puts phone.to_s
+puts laptop.to_s
